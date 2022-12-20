@@ -1,0 +1,108 @@
+.admin-home-page {
+    background-image: url("../../img/4.jpeg");
+    background-size: 103%;
+    height: 100vh;
+}
+
+.admin-home-page h1 {
+    position: absolute;
+    width: 252px;
+    height: 108px;
+    left: 87px;
+    top: 154px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(147, 110, 82, 0.88);
+}
+
+.admin-home-page .btn-FaUserCheck{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 319px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-home-page .FaUserCheck{
+    width: 63px;
+    height: 48px;
+}
+
+.admin-home-page .btn-FaUserPlus{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 469px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-home-page .FaUserPlus{
+    width: 60px;
+    height: 68px;
+}
+
+.admin-home-page .btn-FaUserCog{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 469px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-home-page .FaUserCog{
+    width: 60px;
+    height: 68px;
+}
+
+.admin-home-page .btn-FaUserTimes{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 319px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.admin-home-page .FaUserTimes{
+    width: 63px;
+    height: 48px;
+}
+
+.admin-home-page .logout{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 300px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }

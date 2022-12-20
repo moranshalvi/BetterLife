@@ -1,0 +1,85 @@
+.upload-more-diplomas-page {
+    background-image: url("../../img/2.jpeg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding: 1.5rem;
+  }
+
+  .upload-more-diplomas-page h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    color: #005671;
+    margin-top: 140px;
+}
+  
+img {
+  width: 300px;
+  margin: 10px;
+  margin-top: 50px;
+}
+
+.upload-more-diplomas-page .diploma{
+  box-sizing: border-box;
+  position: absolute;
+  width: 285px;
+  height: 42px;
+  left: 25px;
+  background: rgba(160, 164, 165, 0.29);
+  border: 1px solid #000000;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+input[type=file]::before {
+  font-family: 'Poppins';
+  content: 'Select file';
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 10px 2px;
+  cursor: pointer;
+  font-style: normal;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+input[type=file]:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.upload-more-diplomas-page .uploadFile{
+  border: none;
+  opacity: 67%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.5s;
+  cursor: pointer;
+  background: #7EC8DF;
+  margin-top: 70px;
+  margin-left: 100px
+}
+
+.upload-more-diplomas-page .gohome{
+  position: absolute;
+  width: 47px;
+  height: 24px;
+  left: 320px;
+  top: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;    
+  display: flex;
+  align-items: center;
+  color: #58929C;
+}
+  

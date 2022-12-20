@@ -1,0 +1,73 @@
+
+  
+  @media only screen and (max-width:400px) {
+    .home-page {
+      background-image: url("../../img/2.jpeg");
+      background-size: 103%;
+      height: 100vh;
+    }
+    
+    .home-page h1 {
+      position: absolute;
+      width: 305px;
+      height: 192px;
+      left: 70px;
+      top: 150px;
+      font-family: 'Pontano Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 60px;
+      line-height: 96px;
+      color: #936E52;
+    }
+    
+    .home-page .par-wrapper {
+      position: absolute;
+      width: 246px;
+      height: 131px;
+      left: 77px;
+      top: 300px;
+      font-family: 'Pontano Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 27px;
+      line-height: 35px;
+      text-align: center;
+      color: rgba(156, 118, 88, 0.78);
+    }
+    
+    .home-page .btn-help{
+      border: none;
+      opacity: 67%;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      /* transition: all 0.5s; */
+      cursor: pointer;
+      box-sizing: border-box;
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      left: 80px;
+      top: 490px;
+      background: #dfa87e;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 50%;
+    }
+    
+    .home-page .btn-start{
+      border: none;
+      opacity: 67%;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      transition: all 0.5s;
+      cursor: pointer;
+      position: absolute;
+      width: 260px;
+      height: 54px;
+      left: 75px;
+      top: 757px;
+      background: #7EC8DF;
+    }
+  }

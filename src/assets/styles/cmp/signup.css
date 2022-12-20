@@ -1,0 +1,208 @@
+.signup{
+    background-image: url("../../img/2.jpeg");
+    background-size: 103%;
+    height: 100vh;
+}
+
+.signup h1 {
+    position: absolute;
+    width: 256px;
+    height: 39px;
+    left: 87px;
+    top: 135px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #005671;
+    backdrop-filter: blur(2px);    
+}
+
+.signup .firstNameTherapist {
+    box-sizing: border-box;
+    position: absolute;
+    width: 135px;
+    height: 42px;
+    left: 25px;
+    top: 217px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+}
+
+.signup .firstName {
+    box-sizing: border-box;
+    position: absolute;
+    width: 212px;
+    height: 42px;
+    left: 25px;
+    top: 217px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+}
+
+.signup .inp-firstName {
+    box-sizing: border-box;
+    position: absolute;
+    width: 212px;
+    height: 42px;
+    left: 25px;
+    top: 217px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+}
+
+.signup .lastNameTherapist {
+    box-sizing: border-box;
+    position: absolute;
+    width: 135px;
+    height: 42px;
+    left: 178px;
+    top: 217px; 
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000; 
+}
+
+.signup .lastName {
+    box-sizing: border-box;
+    position: absolute;
+    width: 212px;
+    height: 42px;
+    left: 25px;
+    top: 294px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000; 
+}
+
+.signup .inp {
+    box-sizing: border-box;
+    position: absolute;
+    width: 212px;
+    height: 42px;
+    left: 25px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+}
+
+.signup .diploma {
+    box-sizing: border-box;
+    position: absolute;
+    width: 285px;
+    height: 42px;
+    left: 25px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+    top: 294px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    font-family: 'Poppins';
+    content: 'Select file';
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px 2px;
+    cursor: pointer;
+    font-style: normal;
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.signup .inp-lastName {
+    top: 294px;
+}
+
+.signup .password {
+    top: 371px;
+}
+
+.signup .phoneNumber {
+    top: 448px;
+}
+
+.signup .phoneNumberUpdate {
+    top: 371px;
+}
+
+.signup .city {
+    top: 525px;
+}
+
+.signup .cityUpdate {
+    top: 448px;
+}
+
+.signup .streetAddress {
+    top: 602px;
+}
+
+.signup .streetAddressUpdate {
+    top: 525px;
+}
+
+.signup .email {
+    top: 670px;
+}
+
+.signup .btn{
+    border: none;
+    opacity: 67%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    width: 338px;
+    height: 63px;
+    left: 25px;
+    top: 744px;
+    background: #7EC8DF;
+  }
+
+  .signup .btnUpdate{
+    border: none;
+    opacity: 67%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    width: 338px;
+    height: 63px;
+    left: 25px;
+    top: 612px;
+    background: #7EC8DF;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+
+.signup .gohome{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 320px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }

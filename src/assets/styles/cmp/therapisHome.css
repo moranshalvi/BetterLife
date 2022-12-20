@@ -1,0 +1,123 @@
+.therapis-home-page {
+    background-image: url("../../img/4.jpeg");
+    background-size: 103%;
+    height: 100vh;
+}
+
+.therapis-home-page h1 {
+    position: absolute;
+    width: 252px;
+    height: 108px;
+    left: 87px;
+    top: 154px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(147, 110, 82, 0.88);
+}
+
+.therapis-home-page .par-wrapper{
+    position: absolute;
+    width: 252px;
+    height: 108px;
+    left: 83px;
+    top: 190px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: rgba(162, 121, 90, 0.88);
+}
+
+.therapis-home-page .btn-FaUserCog{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 319px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.therapis-home-page .FaUserCog{
+    width: 63px;
+    height: 48px;
+}
+
+.therapis-home-page .btn-MdOutlineMedicalServices{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 469px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.therapis-home-page .MdOutlineMedicalServices{
+    width: 45px;
+    height: 50px;
+}
+
+.therapis-home-page .btn-MdUploadFile{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 469px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.therapis-home-page .MdUploadFile{
+    width: 50px;
+    height: 58px;
+}
+
+.therapis-home-page .btn-BsBell{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 319px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.therapis-home-page .BsBell{
+    width: 63px;
+    height: 48px;
+}
+
+.therapis-home-page .logout{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 300px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }

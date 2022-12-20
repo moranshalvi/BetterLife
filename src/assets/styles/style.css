@@ -1,0 +1,16 @@
+/* css */
+@import "./cmp/signup.css";
+@import "./cmp/home.css";
+@import "./cmp/login.css";
+@import "./cmp/registration.css";
+@import "./cmp/findHelp.css";
+@import "./cmp/patientHome.css";
+@import "./cmp/therapisHome.css";
+@import "./cmp/adminHome.css";
+@import "./cmp/showUsers.css";
+@import "./cmp/uploadMoreDiplomas.css";
+@import "./cmp/breathe.css";
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&family=Poppins:wght@200;300&display=swap');

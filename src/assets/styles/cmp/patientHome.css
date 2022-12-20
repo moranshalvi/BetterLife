@@ -1,0 +1,129 @@
+.patient-home-page {
+    background-image: url("../../img/2.jpeg");
+    background-size: 103%;
+    height: 100vh;
+}
+
+.patient-home-page h1 {
+    position: absolute;
+    width: 252px;
+    height: 36px;
+    left: 87px;
+    top: 154px;   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(147, 110, 82, 0.88);
+    border-radius: 50%;
+}
+
+
+.patient-home-page .btn-help{
+    border: none;
+    opacity: 67%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: 80px;
+    top: 227px;
+    background: #dfa87e;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+.patient-home-page .btn-FaUserCog{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 498px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.patient-home-page .FaUserCog{
+    width: 63px;
+    height: 48px;
+}
+
+.patient-home-page .btn-VscFiles{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 229px;
+    top: 648px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.patient-home-page .VscFiles{
+    width: 45px;
+    height: 50px;
+}
+
+.patient-home-page .btn-FaFileMedical{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 648px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.patient-home-page .FaFileMedical{
+    width: 42px;
+    height: 50px;
+}
+
+.patient-home-page .btn-FaPhotoVideo{
+    border: none;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 47px;
+    top: 498px;
+    background: rgba(44, 197, 244, 0.52);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.patient-home-page .FaPhotoVideo{
+    width: 63px;
+    height: 48px;
+}
+
+.patient-home-page .logout{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 300px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }

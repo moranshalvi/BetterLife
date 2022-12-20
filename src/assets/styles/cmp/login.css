@@ -1,0 +1,100 @@
+  .login-page {
+    background-image: url("../../img/2.jpeg");
+    background-size: 103%;
+    height: 100vh;
+  }
+
+  .login-page h1 {
+    position: absolute;
+    width: 164px;
+    height: 21px;
+    left: 113px;
+    top: 170px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    color: #936E52;
+  }
+  
+  input[type=text]{
+    position: absolute;
+    width: 340px;
+    height: 65px;
+    left: 25px;
+    top: 300px;
+    background: rgba(160, 164, 165, 0.42);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 251, 251, 0.79);
+  }
+
+  input[type=password]{
+    position: absolute;
+    width: 340px;
+    height: 65px;
+    left: 25px;
+    top: 409px;
+    background: rgba(160, 164, 165, 0.42);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 251, 251, 0.79);
+  }
+
+  .login-page .btn{
+    border: none;
+    opacity: 67%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    width: 340px;
+    height: 65px;
+    left: 25px;
+    top: 518px;
+    background: #7EC8DF;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  .login-page .creatAccount{
+    position: absolute;
+    height: 40px;
+    left: 150px;
+    top: 593px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 18px;
+    line-height: 27px;
+    color: #B54414;
+  }
+
+  .login-page .gohome{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 320px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }
+
