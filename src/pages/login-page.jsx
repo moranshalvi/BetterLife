@@ -45,6 +45,13 @@ export const Login = () => {
         navigate("/adminHomePage");
       }
     }
+    else{
+      swal(
+        "Hello,",
+        "The mail or the password that entered is incorrect, please enter again",
+        "error"
+      );
+    }
   };
 
   return (
