@@ -14,8 +14,13 @@ import { Breathe } from "./video/breathe-page";
 import { Hands } from "./video/hands-page";
 import { Sea } from "./video/sea-page"
 import { Neck } from "./video/neck-page"
+import { MedicalCard } from "./pages/medical-card-page";
 
 export default [
+  {
+    path: "/medicalCard",
+    element: <MedicalCard />,
+  },
   {
     path: "/neck",
     element: <Neck />,

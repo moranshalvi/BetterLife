@@ -21,16 +21,24 @@ export const userService = {
   uploadDiploma,
   getLoggedinUser,
   getUsers,
+  getMedicalCard,
   remove,
   therapistStatus,
   update,
+  updateMedicalCard,
   getById,
+  UploadMedicalCard,
 };
 
 window.us = userService;
 
 function getUsers() {
   const usersCollectionRef = collection(db, "user");
+  return getDocs(usersCollectionRef);
+}
+
+function getMedicalCard() {
+  const usersCollectionRef = collection(db, "medical cards");
   return getDocs(usersCollectionRef);
 }
 
@@ -53,6 +61,15 @@ async function therapistStatus(userId, status) {
 async function update(user) {
   try {
     await firestoreActionsService.updateDocument(user.id, collectionName, user);
+    saveLocalUser(user)
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function updateMedicalCard(user) {
+  try {
+    await firestoreActionsService.updateDocument(user.id, "medical cards", user);
     saveLocalUser(user)
   } catch (err) {
     console.log(err);
@@ -121,4 +138,12 @@ function getLoggedinUser() {
   return JSON.parse(
     sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || "null"
   );
+}
+
+async function UploadMedicalCard(user) {
+  try {
+    await firestoreActionsService.addDocument(user, "medical cards", user.id);
+  } catch (err) {
+    console.log(err);
+  }
 }

@@ -72,15 +72,21 @@ export const Signup = () => {
     ev.preventDefault();
     if (/\S+@\S+\.\S+/.test(user.email)) {
       if (!loggedInUser) {
-        if (
-          /\.pdf$/.test(diplomaUpload.name) ||
-          /\.docx$/.test(diplomaUpload.name)
-        ) {
-          alert("Error, only image files can be uploaded");
-        } else {
-          await userService.signup(user);
-          await userService.uploadDiploma(diplomaUpload, user);
-          navigate("/login");
+        if(userType === "Therapist"){
+          if (
+            /\.pdf$/.test(diplomaUpload.name) ||
+            /\.docx$/.test(diplomaUpload.name)
+          ) {
+            alert("Error, only image files can be uploaded");
+          } else {
+            await userService.signup(user);
+            await userService.uploadDiploma(diplomaUpload, user);
+            navigate("/login");
+          }
+        }
+        else{
+            await userService.signup(user);
+            navigate("/login");
         }
       } else {
         await userService.update(user);

@@ -56,9 +56,6 @@ export const Neck = () => {
       <img src={lotusFlower} className="lotusFlower" />
       <h1>settle down for a moment, relax, breathe and do the same!</h1>
       <div className="container flex" ref={container}></div>
-      <a className="gohome" onClick={() => loggedInUser? navigate("/patientHomePage") : navigate("/")}>
-        HOME
-      </a>
     </div>
   );
 };

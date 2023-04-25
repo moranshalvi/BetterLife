@@ -57,9 +57,6 @@ export const Breathe = () => {
       <img src={lotusFlower} className="lotusFlower" />
       <h1>Every Breathe Matter</h1>
       <div className="container flex" ref={container}></div>
-      <a className="gohome" onClick={() => loggedInUser? navigate("/patientHomePage") : navigate("/")}>
-        HOME
-      </a>
     </div>
   );
 };

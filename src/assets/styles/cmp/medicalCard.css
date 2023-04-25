@@ -1,0 +1,135 @@
+.medicalCard{
+    background-image: url("../../img/2.jpeg");
+    background-size: 103%;
+    height: 100vh;
+}
+
+.medicalCard h1 {
+    position: absolute;
+    width: 256px;
+    height: 39px;
+    left: 87px;
+    top: 135px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 39px;    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #005671;
+    backdrop-filter: blur(2px);    
+}
+
+.medicalCard .inp {
+    box-sizing: border-box;
+    position: absolute;
+    width: 212px;
+    height: 42px;
+    left: 25px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+}
+
+.medicalCard .firstName {
+    top: 217px;
+}
+
+.medicalCard .lastName {
+    top: 294px;
+}
+
+.medicalCard .phoneNumberUpdate {
+    top: 371px;
+}
+
+.medicalCard .cityUpdate {
+    top: 448px;
+}
+
+.medicalCard .streetAddressUpdate {
+    top: 525px;
+}
+
+
+.medicalCard .emergencyContactPerson {
+    box-sizing: border-box;
+    position: absolute;
+    width: 350px;
+    height: 42px;
+    left: 25px;
+    background: rgba(160, 164, 165, 0.29);
+    border: 1px solid #000000;
+    top: 602px;
+}
+
+.medicalCard .regularMedications {
+    position: absolute;
+    left: 25px;
+    top: 679px;
+}
+
+.medicalCard .btnRegularMedicationsYes {
+    position: absolute;
+    left: 25px;
+    top: 715px;
+}
+
+.medicalCard .btnRegularMedicationsNo {
+    position: absolute;
+    left: 70px;
+    top: 715px;
+}
+
+.medicalCard .regularMedicationsText {
+    position: absolute;
+    left: 32px;
+    top: 740px;
+    width: 330px;
+    height: 44px;
+}
+
+.medicalCard .btnUpdate{
+    border: none;
+    opacity: 67%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: absolute;
+    width: 338px;
+    height: 63px;
+    left: 25px;
+    background: #7EC8DF;
+}
+
+.medicalCard .btnUpdateNo{
+    top: 756px;
+  }
+
+  .medicalCard .btnUpdateYes{
+    top: 800px;
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+
+.medicalCard .gohome{
+    position: absolute;
+    width: 47px;
+    height: 24px;
+    left: 320px;
+    top: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;    
+    display: flex;
+    align-items: center;
+    color: #58929C;
+  }
