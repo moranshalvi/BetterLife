@@ -12,10 +12,10 @@ export const Signup = () => {
   const [diplomaUpload, setDiplomaUpload] = useState(null);
 
   useEffect(() => {
-    IsConnected();
+    isConnected();
   }, []);
 
-  const IsConnected = () => {
+  const isConnected = () => {
     if (!loggedInUser) {
       setUser({
         id: "",

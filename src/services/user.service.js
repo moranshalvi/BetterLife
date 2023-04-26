@@ -4,7 +4,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import firebaseService from "./firebase.service";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 import { v4 } from "uuid";
 
@@ -67,18 +67,19 @@ async function update(user) {
   }
 }
 
-async function updateMedicalCard(user) {
+async function updateMedicalCard(medicalCard) {
   try {
-    await firestoreActionsService.updateDocument(user.id, "medical cards", user);
-    saveLocalUser(user)
+    await firestoreActionsService.updateDocumentOfMedicalCard(medicalCard.id, "medical cards", medicalCard);
+    saveLocalUser(medicalCard)
   } catch (err) {
     console.log(err);
   }
 }
 
-async function getById(userId) {
-  // const user = firebaseService
-  // return user;
+async function getById(medicalCardId, collectionName) {
+  const medicalCardRef = doc(db, collectionName, medicalCardId);
+  const medicalCard = await getDoc(medicalCardRef);
+  return medicalCard.data();
 }
 
 async function login(userToLogin) {

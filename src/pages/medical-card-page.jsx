@@ -6,87 +6,100 @@ import { userService } from "../services/user.service";
 export const MedicalCard = () => {
   const navigate = useNavigate();
   const loggedInUser = userService.getLoggedinUser();
-  const [user, setUser] = useState({});
+  //TODO: medicalCard
+  const [medicalCard, setMedicalCard] = useState({});
   const [showTextBox, setShowTextBox] = useState(false);
   const [showBtnYes, setShowBtnYes] = useState(false);
   const [showBtnNo, setShowBtnNo] = useState(true);
-  const [medicalCards, setMedicalCards] = useState([]);
-  
-  useEffect(() => {
-      const getUsres = async () => {
-          const data = await userService.getMedicalCard();
-          setMedicalCards(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        };
-        getUsres();
-    }, []);
-    
-    useEffect(() => {
-      IsConnected();
-    }, []);
-    
-    const IsConnected = () => {
-    if (medicalCards.find((user) => user.id === loggedInUser.id)){
-        console.log(user)
-    }
-    else{
-        setUser({
-            id: loggedInUser.id,
-            firstName: loggedInUser.firstName,
-            lastName: loggedInUser.lastName,
-            phoneNumber: loggedInUser.phoneNumber,
-            city: loggedInUser.city,
-            streetAddress: loggedInUser.streetAddress,
-            regularMedications: "no",
-            emergencyContactPerson: "",
-        })    
-    }
-  };
 
-  const handleClickYes = () => {
+    useEffect(() => {
+      isConnected();
+    }, []);
+    
+    const isConnected = async () => {
+        const medicalCardWithId = await userService.getById(loggedInUser.id, "medical cards")
+        if (medicalCardWithId){
+          setMedicalCard(medicalCardWithId)
+          if(medicalCardWithId.regularMedications.length > 0){
+            setShowTextBox(true);
+            setShowBtnNo(false)
+            setShowBtnYes(true)
+          }
+          else{
+            setShowTextBox(false);
+            setShowBtnNo(true)
+            setShowBtnYes(false)
+          }
+        }
+        else{
+            setMedicalCard({
+                id: null,
+                firstName: loggedInUser.firstName,
+                lastName: loggedInUser.lastName,
+                phoneNumber: loggedInUser.phoneNumber,
+                city: loggedInUser.city,
+                streetAddress: loggedInUser.streetAddress,
+                regularMedications: "",
+                emergencyContactPerson: "",
+            })    
+        }
+    };
+
+  const handleClickYes = (ev) => {
+    ev.preventDefault();
     setShowTextBox(true);
     setShowBtnNo(false)
     setShowBtnYes(true)
   };
 
-  const handleClickNo = () => {
+  const handleClickNo = (ev) => {
+    ev.preventDefault();
     setShowTextBox(false);
     setShowBtnNo(true)
     setShowBtnYes(false)
+    medicalCard.regularMedications = ""
   };
 
 
 
   const handleChange = (ev) => {
+    ev.preventDefault();
     const val = ev.target.value;
     const filed = ev.target.name;
 
     if (filed === "firstName" || filed === "lastName" || filed === "city") {
       if (/^[A-Za-zא-ת]*$/.test(val)) {
-        setUser({ ...user, [filed]: val });
+        setMedicalCard({ ...medicalCard, [filed]: val });
       } else {
         swal("Oops!", "only letters!", "error");
       }
     }
     
     if (filed === "streetAddress" || filed === "phoneNumber" || "regularMedications" || "emergencyContactPerson") {
-      setUser({ ...user, [filed]: val });
+      setMedicalCard({ ...medicalCard, [filed]: val });
     }
   };
 
   const onSaveUser = async (ev) => {
     ev.preventDefault();
-    await userService.UploadMedicalCard(user);
+    if(medicalCard.id){
+        await userService.updateMedicalCard(medicalCard);
+    }
+    else{
+      medicalCard.id = loggedInUser.id
+        await userService.UploadMedicalCard(medicalCard);
+    }
   };
 
   return (
     <div className="medicalCard">
         <h1> hello {loggedInUser.firstName}</h1>
-      <form onSubmit={onSaveUser}>
+      <form>
         <input
           className={"inp firstName"}
           name="firstName"
           onInput={handleChange}
-          value={user.firstName}
+          value={medicalCard.firstName}
           type="text"
           placeholder="First name"
           required
@@ -95,7 +108,7 @@ export const MedicalCard = () => {
           className={"inp lastName"}
           name="lastName"
           onInput={handleChange}
-          value={user.lastName}
+          value={medicalCard.lastName}
           type="text"
           placeholder="Last name"
           required
@@ -104,7 +117,7 @@ export const MedicalCard = () => {
           className={"inp phoneNumberUpdate"}
           name="phoneNumber"
           onInput={handleChange}
-          value={user.phoneNumber}
+          value={medicalCard.phoneNumber}
           type="text"
           placeholder="Phone Number"
           required
@@ -113,7 +126,7 @@ export const MedicalCard = () => {
           className={"inp cityUpdate"}
           name="city"
           onInput={handleChange}
-          value={user.city}
+          value={medicalCard.city}
           type="text"
           placeholder="City"
           required
@@ -122,7 +135,7 @@ export const MedicalCard = () => {
           className={"inp streetAddressUpdate"}
           name="streetAddress"
           onInput={handleChange}
-          value={user.streetAddress}
+          value={medicalCard.streetAddress}
           type="text"
           placeholder="Street Address"
           required
@@ -132,16 +145,17 @@ export const MedicalCard = () => {
           name="emergencyContactPerson"
           onInput={handleChange}
           type="text"
+          value={medicalCard.emergencyContactPerson}
           placeholder="phone number of an emergency contact"
           required
         ></input>
 
         <a className={"regularMedications"}>Do you take regular medications?</a>
         <button className={"btnRegularMedicationsYes"} onClick={handleClickYes}>Yes</button>
-        {showTextBox && <textarea className={"regularMedicationsText"} name="regularMedications" onInput={handleChange} >Please write down the medications you are taking</textarea>}
+        {showTextBox && <textarea className={"regularMedicationsText"} name="regularMedications" onInput={handleChange} value={medicalCard.regularMedications} >Please write down the medications you are taking</textarea>}
         <button className={"btnRegularMedicationsNo"} onClick={handleClickNo}>No</button>
-        {showBtnNo && <button className={"btnUpdate btnUpdateNo"}>Update</button>}
-        {showBtnYes && <button className={"btnUpdate btnUpdateYes"}>Update</button>}
+        {showBtnNo && <button className={"btnUpdate btnUpdateNo"} onClick={onSaveUser}>Update</button>}
+        {showBtnYes && <button className={"btnUpdate btnUpdateYes"} onClick={onSaveUser}>Update</button>}
 
         <a className="gohome" onClick={() => navigate("/patientHomePage")}> HOME </a>
       </form>

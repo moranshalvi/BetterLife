@@ -7,6 +7,7 @@ export const firestoreActionsService = {
   updateDocument,
   getDocument,
   updateFiled,
+  updateDocumentOfMedicalCard,
 };
 
 const db = getFirestore(firebaseService.app);
@@ -67,6 +68,25 @@ async function updateDocument(docName, collectionName, user) {
       phoneNumber: user.phoneNumber,
       city: user.city,
       streetAddress: user.streetAddress
+    });
+  } catch (e) {
+    throw new Error(
+      `Error was on updating document in collection:${collectionName}, desc:${e}`
+    );
+  }
+}
+
+async function updateDocumentOfMedicalCard(docName, collectionName, medicalCard) {
+  try {
+    const washingtonRef = doc(db, collectionName, docName);
+    await updateDoc(washingtonRef, {
+      firstName: medicalCard.firstName,
+      lastName: medicalCard.lastName,
+      phoneNumber: medicalCard.phoneNumber,
+      city: medicalCard.city,
+      streetAddress: medicalCard.streetAddress,
+      regularMedications: medicalCard.regularMedications,
+      emergencyContactPerson: medicalCard.emergencyContactPerson
     });
   } catch (e) {
     throw new Error(
